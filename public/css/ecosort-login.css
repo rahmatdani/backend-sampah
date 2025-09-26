@@ -1,0 +1,66 @@
+/* Login Page Custom Styles */
+
+.fi-auth-login-page {
+    background: linear-gradient(135deg, #368b3a 0%, #2d6e30 100%);
+}
+
+.fi-auth-login-page .fi-auth-card {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-radius: 16px;
+    border: none;
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+.fi-auth-login-page .fi-auth-card-header {
+    text-align: center;
+    padding: 2rem 1.5rem 1rem;
+}
+
+.fi-auth-login-page .fi-auth-card-header .fi-brand-logo {
+    max-height: 5rem;
+    width: auto;
+    margin: 0 auto 1rem;
+    display: block;
+}
+
+.fi-auth-login-page .fi-auth-card-header .fi-brand-name {
+    color: #368b3a;
+    font-weight: 800;
+    font-size: 1.875rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.fi-auth-login-page .fi-form {
+    margin-top: 1.5rem;
+    padding: 0 1.5rem 2rem;
+}
+
+.fi-auth-login-page .fi-btn {
+    background-color: #368b3a;
+    border-color: #368b3a;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+.fi-auth-login-page .fi-btn:hover {
+    background-color: #2d6e30;
+    border-color: #2d6e30;
+}
+
+.fi-auth-login-page .fi-input-wrapper {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.fi-auth-login-page .fi-input-wrapper:focus-within {
+    box-shadow: 0 0 0 3px rgba(54, 139, 58, 0.2);
+}
+
+.fi-auth-login-page .fi-auth-card-actions {
+    text-align: center;
+    margin-top: 1rem;
+}

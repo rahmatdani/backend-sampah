@@ -1,0 +1,139 @@
+/* EcoSort Custom Styles */
+
+/* Custom colors for the EcoSort theme */
+.ecosort-primary {
+    background-color: #368b3a; /* Main brand color */
+}
+
+.ecosort-secondary {
+    background-color: #f59e0b; /* amber-500 */
+}
+
+/* Custom styling for the navigation */
+.fi-sidebar-nav {
+    background: linear-gradient(180deg, #368b3a 0%, #2d6e30 100%);
+}
+
+/* Custom styling for cards */
+.fi-section {
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Custom styling for buttons */
+.fi-btn {
+    border-radius: 8px;
+}
+
+/* Custom styling for the dashboard */
+.fi-main {
+    background-color: #f8fafc;
+}
+
+/* Custom styling for stats widgets */
+.fi-stats-overview-widget {
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Custom styling for tables */
+.fi-table {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Navigation link styling */
+.fi-sidebar-nav a {
+    color: #ffffff;
+}
+
+.fi-sidebar-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Active navigation link */
+.fi-sidebar-nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+}
+
+/* Brand name styling */
+.fi-brand-name {
+    color: #368b3a;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+/* Sidebar header styling */
+.fi-sidebar-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.fi-sidebar-header .fi-brand-name {
+    margin-left: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+}
+
+/* Login page styling */
+.fi-auth-login-page {
+    background: linear-gradient(135deg, #368b3a 0%, #2d6e30 100%);
+}
+
+.fi-auth-login-page .fi-auth-card {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-radius: 16px;
+    border: none;
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+.fi-auth-login-page .fi-auth-card-header {
+    text-align: center;
+    padding: 2rem 1.5rem 1rem;
+}
+
+.fi-auth-login-page .fi-auth-card-header .fi-brand-name {
+    color: #368b3a;
+    font-weight: 800;
+    font-size: 1.875rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.fi-auth-login-page .fi-form {
+    margin-top: 1.5rem;
+    padding: 0 1.5rem 2rem;
+}
+
+.fi-auth-login-page .fi-btn {
+    background-color: #368b3a;
+    border-color: #368b3a;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+.fi-auth-login-page .fi-btn:hover {
+    background-color: #2d6e30;
+    border-color: #2d6e30;
+}
+
+.fi-auth-login-page .fi-input-wrapper {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.fi-auth-login-page .fi-input-wrapper:focus-within {
+    box-shadow: 0 0 0 3px rgba(54, 139, 58, 0.2);
+}
+
+.fi-auth-login-page .fi-auth-card-actions {
+    text-align: center;
+    margin-top: 1rem;
+}
