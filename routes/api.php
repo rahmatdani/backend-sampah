@@ -6,7 +6,6 @@ use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CatatanSampahController;
 use App\Http\Controllers\Api\SetoranSampahController;
 use App\Http\Controllers\Api\ProfilController;
-use App\Http\Controllers\Api\DatasetController;
 use App\Http\Controllers\Api\MlController;
 use App\Http\Controllers\Api\KecamatanController;
 use App\Http\Controllers\Api\AvatarProfilController;
@@ -46,10 +45,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::put('/profil/avatar', [AvatarProfilController::class, 'updateAvatar']);
     Route::post('/profil/avatar/upload', [AvatarProfilController::class, 'uploadAvatar']);
 });
-
-// Dataset (Admin/Peneliti)
-Route::post('/dataset/upload', [DatasetController::class, 'upload']);
-Route::get('/dataset', [DatasetController::class, 'index']);
 
 // Training ML
 Route::post('/ml/train', [MlController::class, 'train']);

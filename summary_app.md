@@ -43,7 +43,7 @@ Flutter (Mobile) ---API---> Laravel 12 (Backend)
    - berat_kg, foto_path, waktu_setoran  
    - is_divalidasi, divalidasi_oleh, points_diberikan  
 
-5. **dataset_sampah** (khusus training ML)  
+  
    - id, label (organik, plastik, kertas, logam, residu)  
    - path_file (folder dataset/image)  
    - uploaded_by (pengguna_id, biasanya admin/peneliti)  

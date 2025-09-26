@@ -77,7 +77,7 @@ class AnalitikSampahResource extends Resource
                         'residu' => 'danger',
                         default => 'primary',
                     }),
-                Tables\Columns\TextColumn::make('volume_final_liter')
+                Tables\Columns\TextColumn::make('volume_terdeteksi_liter')
                     ->label('Volume (L)')
                     ->numeric()
                     ->sortable()
@@ -91,7 +91,7 @@ class AnalitikSampahResource extends Resource
                     ->label('Waktu Setor')
                     ->dateTime()
                     ->sortable(),
-                Tables\Columns\IconColumn::make('is_validasi')
+                Tables\Columns\IconColumn::make('is_divalidasi')
                     ->label('Validasi')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('points_diberikan')
@@ -133,7 +133,7 @@ class AnalitikSampahResource extends Resource
                                 fn (Builder $query, $date): Builder => $query->whereDate('waktu_setoran', '<=', $date),
                             );
                     }),
-                Tables\Filters\TernaryFilter::make('is_validasi')
+                Tables\Filters\TernaryFilter::make('is_divalidasi')
                     ->label('Status Validasi')
                     ->placeholder('Semua Data')
                     ->trueLabel('Sudah Divalidasi')
