@@ -9,6 +9,7 @@ use App\Http\Controllers\Api\ProfilController;
 use App\Http\Controllers\Api\MlController;
 use App\Http\Controllers\Api\KecamatanController;
 use App\Http\Controllers\Api\AvatarProfilController;
+use App\Http\Controllers\Api\NewsController;
 
 // Autentikasi
 Route::post('/login', [AuthController::class, 'login']);
@@ -24,6 +25,7 @@ Route::get('/avatars', [AvatarProfilController::class, 'index']);
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/catatan-sampah', [CatatanSampahController::class, 'index']);
     Route::post('/catatan-sampah', [CatatanSampahController::class, 'store']);
+    Route::get('/riwayat-penyetoran', [CatatanSampahController::class, 'history']);
     
     // More specific routes first
     Route::get('/catatan-sampah/check-ids', [CatatanSampahController::class, 'checkIds']);
@@ -52,3 +54,7 @@ Route::get('/ml/status', [MlController::class, 'status']);
 
 // Prediksi
 Route::post('/ml/predict', [MlController::class, 'predict']);
+
+// Berita publik
+Route::get('/berita', [NewsController::class, 'index']);
+Route::get('/berita/{slug}', [NewsController::class, 'show']);

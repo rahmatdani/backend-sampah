@@ -341,4 +341,42 @@ class CatatanSampahController extends Controller
             ]
         ]);
     }
+
+    /**
+     * Menampilkan riwayat setoran sampah untuk pengguna tertentu.
+     */
+    public function history(Request $request): JsonResponse
+    {
+        $validator = Validator::make($request->all(), [
+            'pengguna_id' => 'required|integer|exists:penggunas,id',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Validasi gagal',
+                'errors' => $validator->errors(),
+            ], 422);
+        }
+
+        $penggunaId = (int) $request->input('pengguna_id');
+
+        $riwayat = CatatanSampah::query()
+            ->where('pengguna_id', $penggunaId)
+            ->orderByDesc('waktu_setoran')
+            ->get([
+                'id',
+                'jenis_terdeteksi as jenis_sampah',
+                'volume_terdeteksi_liter as volume_liter',
+                'berat_kg as berat_kg',
+                'is_divalidasi',
+                'waktu_setoran',
+            ]);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Riwayat setoran ditemukan',
+            'data' => $riwayat,
+        ]);
+    }
 }

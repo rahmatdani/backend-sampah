@@ -2,15 +2,16 @@
 
 @if($path)
     <div class="max-w-xs">
-        @if(str_starts_with($path, 'storage/'))
-            <img src="{{ asset($path) }}" 
-                 alt="Foto Sampah" 
-                 class="max-w-full max-h-20 rounded object-cover">
-        @else
-            <img src="{{ asset('storage/' . $path) }}" 
-                 alt="Foto Sampah" 
-                 class="max-w-full max-h-20 rounded object-cover">
-        @endif
+        @php
+            $normalizedPath = Str::startsWith($path, ['http://', 'https://'])
+                ? $path
+                : (Str::startsWith($path, 'storage/')
+                    ? asset($path)
+                    : asset('storage/' . ltrim($path, '/')));
+        @endphp
+        <img src="{{ $normalizedPath }}"
+             alt="Foto"
+             class="h-12 w-12 object-cover rounded shadow">
     </div>
 @else
     <span class="text-gray-500">Tidak ada foto</span>

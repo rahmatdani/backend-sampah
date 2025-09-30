@@ -152,12 +152,6 @@ class CatatanSampahResource extends Resource
                             ->label('Divalidasi')
                             ->required()
                             ->disabled(fn () => auth()->user()->role !== 'admin'),
-                        Forms\Components\TextInput::make('points_diberikan')
-                            ->label('Points Diberikan')
-                            ->required()
-                            ->integer()
-                            ->disabled(fn (callable $get) => $get('is_divalidasi') ?: (auth()->user()->role !== 'admin'))
-                            ->helperText(fn (callable $get) => $get('is_divalidasi') ? 'Points otomatis diisi karena validasi sudah aktif' : 'Points dapat diedit'),
                     ])
                     ->columns(3),
             ]);
@@ -204,10 +198,6 @@ class CatatanSampahResource extends Resource
                 Tables\Columns\IconColumn::make('is_divalidasi')
                     ->label('Validasi')
                     ->boolean(),
-                Tables\Columns\TextColumn::make('points_diberikan')
-                    ->label('Points')
-                    ->numeric()
-                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Dibuat')
                     ->dateTime()
