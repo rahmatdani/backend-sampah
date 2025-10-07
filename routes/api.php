@@ -10,6 +10,7 @@ use App\Http\Controllers\Api\MlController;
 use App\Http\Controllers\Api\KecamatanController;
 use App\Http\Controllers\Api\AvatarProfilController;
 use App\Http\Controllers\Api\NewsController;
+use App\Http\Controllers\Api\ScoreboardController;
 
 // Autentikasi
 Route::post('/login', [AuthController::class, 'login']);
@@ -46,6 +47,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::put('/profil', [ProfilController::class, 'updateProfil']);
     Route::put('/profil/avatar', [AvatarProfilController::class, 'updateAvatar']);
     Route::post('/profil/avatar/upload', [AvatarProfilController::class, 'uploadAvatar']);
+    Route::get('/scoreboard', [ScoreboardController::class, 'index']);
 });
 
 // Training ML
